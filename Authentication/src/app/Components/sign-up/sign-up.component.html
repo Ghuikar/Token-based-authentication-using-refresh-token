@@ -1,24 +1,82 @@
-<div class="parent">
+<div class="center-signup-form parent">
+    <div class="container signup-form text-color">
+        <div class="title">Registration</div>
+        <div class="content">
+            <form [formGroup]="registerForm" (ngSubmit)="SignUp()">
+                <div class="user-details">
+                  <div class="input-box">
+                    <span class="details">First Name</span>
+                    <input type="text" formControlName="firstName" placeholder="Enter your first name" required />
+                  </div>
+                  <!-- <div class="input-box">
+                    <span class="details">Middle Name</span>
+                    <input type="text" formControlName="middleName" placeholder="Enter your middle name" />
+                  </div> -->
+                  <div class="input-box">
+                      <span class="details">Last Name</span>
+                      <input type="text" formControlName="lastName" placeholder="Enter your last name" required />
+                    </div>
+                  <div class="input-box">
+                      <span class="details">User Name</span>
+                      <input type="text" formControlName="username" placeholder="Enter your username" required />
+                    </div>
+                  <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" formControlName="email" placeholder="Enter your email" required />
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" formControlName="password" placeholder="Enter your password" required />
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Mobile Number</span>
+                    <input type="text" formControlName="mobileNo" placeholder="Enter your mobile number" required />
+                  </div>
+              
+                  <!-- <ng-container formGroupName="userSocialDetails">
+                    <div class="input-box">
+                      <span class="details">Facebook Profile URL</span>
+                      <input type="text" formControlName="facebookProfileUrl" placeholder="Enter your Facebook profile URL" />
+                    </div>
+                    <div class="input-box">
+                      <span class="details">LinkedIn Profile URL</span>
+                      <input type="text" formControlName="linkdinProfileUrl" placeholder="Enter your LinkedIn profile URL" />
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Instagram Handle</span>
+                      <input type="text" formControlName="instagramHandle" placeholder="Enter your Instagram handle" />
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Twitter Handle</span>
+                      <input type="text" formControlName="twitterHandle" placeholder="Enter your Twitter handle" />
+                    </div>
+                  </ng-container> -->
+              
+                  <!-- <ng-container formGroupName="UserAddress">
+                    <div class="input-box">
+                      <span class="details">City</span>
+                      <input type="text" formControlName="city" placeholder="Enter your city" required />
+                    </div>
+                    <div class="input-box">
+                      <span class="details">State</span>
+                      <input type="text" formControlName="state" placeholder="Enter your state" required />
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Pincode</span>
+                      <input type="text" formControlName="pincode" placeholder="Enter your pincode" required />
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Address Line</span>
+                      <input type="text" formControlName="addressLine" placeholder="Enter your address line" required />
+                    </div>
+                  </ng-container> -->
 
-    <div class="wrapper">
-        <form [formGroup]="register" (ngSubmit)="SignUp()" action="">
-            <h1>Register</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username" formControlName="username" required>
-                <i class='bx bxs-user'></i>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="password" formControlName="password" required>
-                <i class='bx bxs-lock-alt'></i>
-            </div>
-            
-            <button type="submit" class="btn">Sign Up</button>
-            <div class="register-link">
-                <p>Already have an account? <a routerLink="signUp">
-                    Login
-                </a></p>
-            </div>
-        </form>
+                </div>
+                <div class="button">
+                  <button type="submit" class="btn-reg">Register</button>
+                </div>
+              </form>
+              
+        </div>
     </div>
-    
 </div>
