@@ -22,9 +22,10 @@ export class UserService {
   }
 
   
+  baseUrl2 = 'https://freeapi.gerasim.in/api/JWT/';
 
   getAllUsers(endpoint:string){
-    const url = 'https://freeapi.gerasim.in/api/JWT/'+ endpoint;
+    const url = this.baseUrl2 + endpoint;
      return this.http.get(url)
   }
 }

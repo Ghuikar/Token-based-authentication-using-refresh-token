@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
     this.getAllUsers();
   }
 
+
   getAllUsers() {
     console.log("dashboaed called")
     this.http.getAllUsers('GetAllUsers').subscribe(
@@ -20,4 +21,5 @@ export class DashboardComponent implements OnInit {
       console.log('getAllUsers==>', res);
     });
   }
+  
 }
