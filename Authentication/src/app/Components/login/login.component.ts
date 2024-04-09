@@ -25,12 +25,14 @@ export class LoginComponent implements OnInit {
     console.log('login', this.loginForm.value);
     this.http.login('login', this.loginForm.value).subscribe(
       (res: any) => {
+
       const accessToken = res.data.accessToken;
       if (accessToken) {
         localStorage.setItem('accessToken', accessToken);
         console.log('accessToken=', accessToken);
+        this.route.navigate(['/dashboard'])
+        
       }
-     this.route.navigate(['/dashboard'])
     });
   }
 
